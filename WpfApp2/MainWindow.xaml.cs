@@ -32,9 +32,7 @@ namespace WpfApp2
         }
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
-        {
-            int days = 4;
-
+        {                    
             List<PlaceCoord> placeCoords = new List<PlaceCoord>();
             placeCoords.Add(new PlaceCoord { Name="Астана", Lat = "51.1801000", Lon= "71.4459800" });
             placeCoords.Add(new PlaceCoord { Name = "Алматы", Lat = "43.2566700", Lon = "76.9286100" });
@@ -59,8 +57,7 @@ namespace WpfApp2
             request.Headers.Add("X-Yandex-API-Key: 99e485d2-7855-440e-a07c-f7ca00df1faa");
             WebResponse response = request.GetResponse();
 
-            dynamic allData;
-            List<string> iconsXML = new List<string>();
+            dynamic allData;            
 
             using (Stream stream = response.GetResponseStream())
             {
